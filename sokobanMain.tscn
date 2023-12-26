@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://wjfkob6d5t47"]
+
+[ext_resource type="Texture2D" uid="uid://ctan4orv6tvcv" path="res://assets/kenney_sokoban-pack/PNG/Default size/Crates/crate_02.png" id="1_bgq6f"]
+[ext_resource type="Texture2D" uid="uid://l32233j8f878" path="res://assets/kenney_sokoban-pack/PNG/Default size/Crates/crate_27.png" id="2_56a2g"]
+[ext_resource type="Texture2D" uid="uid://cnf6m5vitt1vf" path="res://assets/kenney_sokoban-pack/PNG/Default size/Ground/ground_06.png" id="3_l0wac"]
+[ext_resource type="Texture2D" uid="uid://d1gksxi4w7r6t" path="res://assets/kenney_sokoban-pack/PNG/Default size/Player/player_01.png" id="4_dfvvq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Crate02" type="Sprite2D" parent="."]
+position = Vector2(173, 132)
+texture = ExtResource("1_bgq6f")
+
+[node name="Crate27" type="Sprite2D" parent="."]
+position = Vector2(258, 133)
+texture = ExtResource("2_56a2g")
+
+[node name="Ground06" type="Sprite2D" parent="."]
+position = Vector2(180, 230)
+texture = ExtResource("3_l0wac")
+
+[node name="Player01" type="Sprite2D" parent="."]
+position = Vector2(277, 233)
+texture = ExtResource("4_dfvvq")
