@@ -20,5 +20,10 @@ func _unhandled_input(event):
 		if event.is_action_pressed(dir):
 			move(dir)
 
+@onready var ray = $RayCast2D
+
 func move(dir):
-	position = position + inputs[dir] * tile_size
+	ray.target_position = inputs[dir] * tile_size
+	ray.force_raycast_update()
+	if !ray.is_colliding():
+		position = position + inputs[dir] * tile_size
