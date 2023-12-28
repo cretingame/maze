@@ -1,17 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp60udvlabx2p"]
+[gd_scene load_steps=3 format=3 uid="uid://c5oddv10i0cyp"]
 
-[ext_resource type="Texture2D" uid="uid://lnoxnmmsbxpn" path="res://assets/kenney_sokoban-pack/PNG/Default size/Blocks/block_08.png" id="1_sa6v6"]
+[ext_resource type="Texture2D" uid="uid://06lkwu7yafa7" path="res://assets/kenney_sokoban-pack/PNG/Default size/Blocks/block_05.png" id="1_xepsq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhkdp"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jq8oc"]
 size = Vector2(64, 64)
 
-[node name="Wall" type="Sprite2D"]
-position = Vector2(320, 128)
-texture = ExtResource("1_sa6v6")
+[node name="Wall" type="StaticBody2D"]
+
+[node name="Block05" type="Sprite2D" parent="."]
+texture = ExtResource("1_xepsq")
 centered = false
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(32, 32)
-shape = SubResource("RectangleShape2D_dhkdp")
+shape = SubResource("RectangleShape2D_jq8oc")

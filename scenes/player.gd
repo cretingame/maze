@@ -23,7 +23,13 @@ func _unhandled_input(event):
 @onready var ray = $RayCast2D
 
 func move(dir):
-	ray.target_position = inputs[dir] * tile_size
+	var vector_dir = inputs[dir] * tile_size
+	ray.target_position = vector_dir
 	ray.force_raycast_update()
 	if !ray.is_colliding():
-		position = position + inputs[dir] * tile_size
+		position = position + vector_dir
+	else:
+		var collider = ray.get_collider()
+		if collider.is_in_group("box"):
+			if collider.move(dir):
+				position = position + vector_dir

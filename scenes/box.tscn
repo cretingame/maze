@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://clr502ntaqi0u"]
+
+[ext_resource type="Texture2D" uid="uid://ctan4orv6tvcv" path="res://assets/kenney_sokoban-pack/PNG/Default size/Crates/crate_02.png" id="1_aqpcq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gswbr"]
+size = Vector2(64, 64)
+
+[node name="box" type="AnimatableBody2D"]
+
+[node name="Crate02" type="Sprite2D" parent="."]
+texture = ExtResource("1_aqpcq")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_gswbr")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(32, 32)
+target_position = Vector2(0, 64)
