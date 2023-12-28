@@ -8,6 +8,7 @@ size = Vector2(64, 64)
 [node name="spot" type="Area2D"]
 
 [node name="Crate27" type="Sprite2D" parent="."]
+z_index = -1
 texture = ExtResource("1_wgcgx")
 centered = false
 
