@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://wjfkob6d5t47"]
+
+[ext_resource type="PackedScene" uid="uid://djp548yuaj1cg" path="res://scenes/sokoban/player.tscn" id="1_0w6vx"]
+[ext_resource type="PackedScene" uid="uid://c5oddv10i0cyp" path="res://scenes/sokoban/wall.tscn" id="2_syt3o"]
+[ext_resource type="PackedScene" uid="uid://clr502ntaqi0u" path="res://scenes/sokoban/box.tscn" id="3_ed86y"]
+[ext_resource type="Script" path="res://scenes/sokoban/box.gd" id="4_jr7c2"]
+[ext_resource type="PackedScene" uid="uid://oklmmj1pqxjo" path="res://scenes/sokoban/spot.tscn" id="5_4x3ei"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.25, 0.25)
+anchor_mode = 0
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("1_0w6vx")]
+position = Vector2(224, 32)
+
+[node name="Wall" parent="." instance=ExtResource("2_syt3o")]
+position = Vector2(128, 64)
+
+[node name="Wall2" parent="." instance=ExtResource("2_syt3o")]
+position = Vector2(128, 128)
+
+[node name="Wall3" parent="." instance=ExtResource("2_syt3o")]
+position = Vector2(128, 192)
+
+[node name="box" parent="." groups=["box"] instance=ExtResource("3_ed86y")]
+position = Vector2(320, 128)
+script = ExtResource("4_jr7c2")
+
+[node name="spot" parent="." instance=ExtResource("5_4x3ei")]
+position = Vector2(448, 192)

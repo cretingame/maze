@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://df7nx42e7w083"]
+
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_hiv65"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hiv65")
+
+[node name="SokobanButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 256.0
+offset_bottom = 128.0
+text = "Sokoban"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 576.0
+offset_right = 1216.0
+offset_bottom = 640.0
+text = "Quit"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 256.0
+text = "Tiland"
+
+[connection signal="pressed" from="SokobanButton" to="." method="_on_sokoban_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
